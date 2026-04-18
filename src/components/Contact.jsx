@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Mail, Phone, MapPin, Link, Send, CheckCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin, Send, CheckCircle } from 'lucide-react'
 import SectionWrapper, { SectionTitle } from './SectionWrapper'
 
 const contactItems = [
   { icon: <Mail size={20} />, label: 'Email', value: 'er.mmdfaisal@gmail.com', href: 'mailto:er.mmdfaisal@gmail.com', color: '#a855f7' },
   { icon: <Phone size={20} />, label: 'Phone', value: '+971 507 746 248', href: 'tel:+971507746248', color: '#06b6d4' },
   { icon: <MapPin size={20} />, label: 'Location', value: 'Abu Dhabi, UAE', href: null, color: '#10b981' },
-  { icon: <Link size={20} />, label: 'LinkedIn', value: 'linkedin.com/in/mohammad-faisal', href: 'https://linkedin.com/in/mohammad-faisal', color: '#3b82f6' },
+  { icon: <Linkedin size={20} />, label: 'LinkedIn', value: 'linkedin.com/in/mohammad-faisal', href: 'https://linkedin.com/in/mohammad-faisal', color: '#3b82f6' },
 ]
 
 export default function Contact() {

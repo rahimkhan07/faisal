@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { Wind, MapPin, Zap, ArrowDown } from 'lucide-react'
-import profileImg from '../assets/profile.jpg'
+// Place your profile.jpg in src/assets/ folder
+// import profileImg from '../assets/profile.jpg'
+const profileImg = null // Replace null with: import profileImg from '../assets/profile.jpg'
 
 const floatAnim = {
   animate: { y: [0, -12, 0], transition: { duration: 4, repeat: Infinity, ease: 'easeInOut' } }
@@ -171,7 +173,7 @@ export default function Hero() {
                   alt="Mohammad Faisal"
                   style={{
                     position: 'absolute', inset: 4, width: 'calc(100% - 8px)', height: 'calc(100% - 8px)',
-                    borderRadius: '50%', objectFit: 'cover', objectPosition: 'top center',
+                    borderRadius: '50%', objectFit: 'cover', objectPosition: 'top',
                   }}
                 />
               ) : (
@@ -187,6 +189,9 @@ export default function Hero() {
                     background: 'linear-gradient(135deg, #a855f7, #ec4899)',
                     WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                   }}>MF</div>
+                  <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', textAlign: 'center', padding: '0 20px' }}>
+                    Add profile.jpg to src/assets/
+                  </div>
                 </div>
               )}
               {/* Floating badges */}

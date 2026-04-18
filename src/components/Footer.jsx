@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Mail, Phone, Link, Wind } from 'lucide-react'
+import { Mail, Phone, Linkedin, Wind } from 'lucide-react'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -50,7 +50,7 @@ export default function Footer() {
               {[
                 { icon: <Mail size={14} />, text: 'er.mmdfaisal@gmail.com', href: 'mailto:er.mmdfaisal@gmail.com' },
                 { icon: <Phone size={14} />, text: '+971 507 746 248', href: 'tel:+971507746248' },
-                { icon: <Link size={14} />, text: 'LinkedIn Profile', href: 'https://linkedin.com/in/mohammad-faisal' },
+                { icon: <Linkedin size={14} />, text: 'LinkedIn Profile', href: 'https://linkedin.com/in/mohammad-faisal' },
               ].map((item, i) => (
                 <a key={i} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener"
                   style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--text2)', fontSize: '0.88rem', transition: 'color 0.2s' }}
@@ -69,36 +69,12 @@ export default function Footer() {
           borderTop: '1px solid var(--border)', paddingTop: 24,
           display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12,
         }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <p style={{ color: 'var(--text3)', fontSize: '0.85rem' }}>
-              © {year} Mohammad Faisal. All rights reserved. Built with React ⚛️ + Framer Motion 🎞️
-            </p>
-            <p style={{ fontSize: '0.82rem', display: 'flex', alignItems: 'center', gap: 6 }}>
-              <span style={{ color: 'var(--text3)' }}>Designed & Developed by</span>
-              <a
-                href="https://nak-digitals.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  fontWeight: 700,
-                  fontFamily: 'Syne, sans-serif',
-                  background: 'linear-gradient(135deg, #a855f7, #ec4899)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  letterSpacing: 0.5,
-                  transition: 'opacity 0.2s',
-                }}
-                onMouseEnter={e => e.currentTarget.style.opacity = '0.8'}
-                onMouseLeave={e => e.currentTarget.style.opacity = '1'}
-              >
-                NAK-Digitals ✨
-              </a>
-            </p>
-          </div>
+          <p style={{ color: 'var(--text3)', fontSize: '0.85rem' }}>
+            © {year} Mohammad Faisal. All rights reserved. Built with React ⚛️ + Framer Motion 🎞️
+          </p>
           <div style={{ display: 'flex', gap: 12 }}>
             {[
-              { icon: <Link size={16} />, href: 'https://linkedin.com/in/mohammad-faisal', color: '#3b82f6' },
+              { icon: <Linkedin size={16} />, href: 'https://linkedin.com/in/mohammad-faisal', color: '#3b82f6' },
               { icon: <Mail size={16} />, href: 'mailto:er.mmdfaisal@gmail.com', color: '#a855f7' },
               { icon: <Phone size={16} />, href: 'tel:+971507746248', color: '#06b6d4' },
             ].map((s, i) => (
