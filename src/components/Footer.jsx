@@ -59,7 +59,7 @@ export default function Footer() {
               {[
                 { icon: <Mail size={14} />, text: 'er.mmdfaisal@gmail.com', href: 'mailto:er.mmdfaisal@gmail.com' },
                 { icon: <Phone size={14} />, text: '+971 507 746 248', href: 'tel:+971507746248' },
-                { icon: <LinkedinIcon size={14} />, text: 'LinkedIn Profile', href: 'https://linkedin.com/in/mohammad-faisal' },
+                { icon: <LinkedinIcon size={14} />, text: 'LinkedIn Profile', href: 'https://www.linkedin.com/in/mohammad-faisal-2b824119b/' },
               ].map((item, i) => (
                 <a key={i} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener"
                   style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--text2)', fontSize: '0.88rem', transition: 'color 0.2s' }}
@@ -79,11 +79,11 @@ export default function Footer() {
           display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12,
         }}>
           <p style={{ color: 'var(--text3)', fontSize: '0.85rem' }}>
-            © {year} Mohammad Faisal. All rights reserved. Built with React ⚛️ + Framer Motion 🎞️
+            © {year} Mohammad Faisal. All rights reserved. Built by <a href="https://nak-digital.vercel.app/">NAK.Digitals</a>
           </p>
           <div style={{ display: 'flex', gap: 12 }}>
             {[
-              { icon: <LinkedinIcon size={16} />, href: 'https://linkedin.com/in/mohammad-faisal' },
+              { icon: <LinkedinIcon size={16} />, href: 'https://www.linkedin.com/in/mohammad-faisal-2b824119b/' },
               { icon: <Mail size={16} />, href: 'mailto:er.mmdfaisal@gmail.com' },
               { icon: <Phone size={16} />, href: 'tel:+971507746248' },
             ].map((s, i) => (

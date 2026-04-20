@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Wind, MapPin, Zap, ArrowDown } from 'lucide-react'
-
-const profileImg = null
+import profileImg from '../assets/profile.jpg'
 
 const floatAnim = {
   animate: { y: [0, -12, 0], transition: { duration: 4, repeat: Infinity, ease: 'easeInOut' } }
@@ -59,7 +58,7 @@ export default function Hero() {
               <span style={{
                 background: 'linear-gradient(135deg, #ccc, #fff)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-              }}>Faisal</span> 🌬️
+              }}>Faisal</span>
             </motion.h1>
 
             <motion.div

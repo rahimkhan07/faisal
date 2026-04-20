@@ -17,7 +17,7 @@ const contactItems = [
   { icon: <Mail size={20} />, label: 'Email', value: 'er.mmdfaisal@gmail.com', href: 'mailto:er.mmdfaisal@gmail.com' },
   { icon: <Phone size={20} />, label: 'Phone', value: '+971 507 746 248', href: 'tel:+971507746248' },
   { icon: <MapPin size={20} />, label: 'Location', value: 'Abu Dhabi, UAE', href: null },
-  { icon: <LinkedinIcon size={20} />, label: 'LinkedIn', value: 'linkedin.com/in/mohammad-faisal', href: 'https://linkedin.com/in/mohammad-faisal' },
+  { icon: <LinkedinIcon size={20} />, label: 'LinkedIn', value: 'linkedin.com/in/mohammad-faisal-2b824119b', href: 'https://www.linkedin.com/in/mohammad-faisal-2b824119b/' },
 ]
 
 export default function Contact() {
