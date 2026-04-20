@@ -26,10 +26,10 @@ export default function Footer() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
               <div style={{
                 width: 40, height: 40, borderRadius: 10,
-                background: 'linear-gradient(135deg, #7c3aed, #ec4899)',
+                background: '#fff',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '1rem', color: '#fff',
-                boxShadow: '0 0 20px rgba(124,58,237,0.4)',
+                fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '1rem', color: '#000',
+                boxShadow: '0 0 20px rgba(255,255,255,0.15)',
               }}>MF</div>
               <span style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '1.1rem' }}>Mohammad Faisal</span>
             </div>
@@ -45,7 +45,7 @@ export default function Footer() {
               {['About', 'Skills', 'Projects', 'Experience', 'Contact'].map(link => (
                 <a key={link} href={`#${link.toLowerCase()}`}
                   style={{ color: 'var(--text2)', fontSize: '0.9rem', transition: 'color 0.2s' }}
-                  onMouseEnter={e => e.target.style.color = '#a855f7'}
+                  onMouseEnter={e => e.target.style.color = '#fff'}
                   onMouseLeave={e => e.target.style.color = 'var(--text2)'}
                 >{link}</a>
               ))}
@@ -63,10 +63,10 @@ export default function Footer() {
               ].map((item, i) => (
                 <a key={i} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener"
                   style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--text2)', fontSize: '0.88rem', transition: 'color 0.2s' }}
-                  onMouseEnter={e => e.currentTarget.style.color = '#a855f7'}
+                  onMouseEnter={e => e.currentTarget.style.color = '#fff'}
                   onMouseLeave={e => e.currentTarget.style.color = 'var(--text2)'}
                 >
-                  <span style={{ color: '#a855f7' }}>{item.icon}</span> {item.text}
+                  <span style={{ color: '#888' }}>{item.icon}</span> {item.text}
                 </a>
               ))}
             </div>
@@ -83,9 +83,9 @@ export default function Footer() {
           </p>
           <div style={{ display: 'flex', gap: 12 }}>
             {[
-              { icon: <LinkedinIcon size={16} />, href: 'https://linkedin.com/in/mohammad-faisal', color: '#3b82f6' },
-              { icon: <Mail size={16} />, href: 'mailto:er.mmdfaisal@gmail.com', color: '#a855f7' },
-              { icon: <Phone size={16} />, href: 'tel:+971507746248', color: '#06b6d4' },
+              { icon: <LinkedinIcon size={16} />, href: 'https://linkedin.com/in/mohammad-faisal' },
+              { icon: <Mail size={16} />, href: 'mailto:er.mmdfaisal@gmail.com' },
+              { icon: <Phone size={16} />, href: 'tel:+971507746248' },
             ].map((s, i) => (
               <motion.a key={i} href={s.href} target={s.href.startsWith('http') ? '_blank' : undefined} rel="noopener"
                 whileHover={{ y: -3, scale: 1.1 }}
@@ -95,7 +95,7 @@ export default function Footer() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   color: 'var(--text2)', transition: 'color 0.2s, border-color 0.2s',
                 }}
-                onMouseEnter={e => { e.currentTarget.style.color = s.color; e.currentTarget.style.borderColor = s.color + '44' }}
+                onMouseEnter={e => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)' }}
                 onMouseLeave={e => { e.currentTarget.style.color = 'var(--text2)'; e.currentTarget.style.borderColor = 'var(--border)' }}
               >{s.icon}</motion.a>
             ))}

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { User, Wrench, Trophy, ExternalLink } from 'lucide-react'
+import { User, Wrench, Trophy } from 'lucide-react'
 import SectionWrapper, { SectionTitle } from './SectionWrapper'
 
 const projects = [
@@ -13,7 +13,6 @@ const projects = [
     role: 'Lead Design Engineer',
     tools: 'HAP, AutoCAD, ASHRAE',
     outcome: '20% energy reduction — zero equipment downtime',
-    color: '#f59e0b', bg: 'rgba(245,158,11,0.08)',
   },
   {
     id: 2, category: 'commercial',
@@ -23,7 +22,6 @@ const projects = [
     role: 'HVAC Design Engineer',
     tools: 'AutoCAD, HAP, Revit MEP',
     outcome: 'LEED-aligned design — 18% energy savings',
-    color: '#a855f7', bg: 'rgba(168,85,247,0.08)',
   },
   {
     id: 3, category: 'industrial',
@@ -33,7 +31,6 @@ const projects = [
     role: 'Design & Project Engineer',
     tools: 'AutoCAD, Manual Calculations',
     outcome: 'Safe working temps maintained — on-time delivery',
-    color: '#10b981', bg: 'rgba(16,185,129,0.08)',
   },
   {
     id: 4, category: 'commercial',
@@ -43,7 +40,6 @@ const projects = [
     role: 'Project Design Engineer',
     tools: 'HAP, AutoCAD, BMS Integration',
     outcome: '25% energy cost reduction achieved',
-    color: '#06b6d4', bg: 'rgba(6,182,212,0.08)',
   },
   {
     id: 5, category: 'substation',
@@ -53,7 +49,6 @@ const projects = [
     role: 'Design Engineer',
     tools: 'ASHRAE Guidelines, AutoCAD',
     outcome: 'Maintained 22°C ±1°C year-round',
-    color: '#ec4899', bg: 'rgba(236,72,153,0.08)',
   },
 ]
 
@@ -76,8 +71,8 @@ function ProjectCard({ project, index }) {
         cursor: 'default',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.borderColor = project.color + '44'
-        e.currentTarget.style.boxShadow = `0 20px 60px ${project.color}22`
+        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'
+        e.currentTarget.style.boxShadow = '0 20px 60px rgba(255,255,255,0.05)'
       }}
       onMouseLeave={e => {
         e.currentTarget.style.borderColor = 'var(--border)'
@@ -86,15 +81,15 @@ function ProjectCard({ project, index }) {
     >
       {/* Header */}
       <div style={{
-        background: project.bg, borderBottom: `1px solid ${project.color}22`,
+        background: 'rgba(255,255,255,0.03)', borderBottom: '1px solid rgba(255,255,255,0.08)',
         padding: '28px 24px 20px',
       }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
           <div>
             <span style={{
               display: 'inline-block', fontSize: '0.72rem', fontWeight: 700,
-              color: project.color, background: project.color + '18',
-              border: `1px solid ${project.color}33`,
+              color: '#aaa', background: 'rgba(255,255,255,0.07)',
+              border: '1px solid rgba(255,255,255,0.12)',
               borderRadius: 50, padding: '3px 12px', letterSpacing: 1.5,
               textTransform: 'uppercase', marginBottom: 10,
               fontFamily: 'JetBrains Mono, monospace',
@@ -111,22 +106,22 @@ function ProjectCard({ project, index }) {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 18 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.84rem' }}>
-            <User size={13} style={{ color: project.color, flexShrink: 0 }} />
+            <User size={13} style={{ color: '#888', flexShrink: 0 }} />
             <span style={{ color: 'var(--text2)' }}><strong style={{ color: 'var(--text)' }}>Role:</strong> {project.role}</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.84rem' }}>
-            <Wrench size={13} style={{ color: project.color, flexShrink: 0 }} />
+            <Wrench size={13} style={{ color: '#888', flexShrink: 0 }} />
             <span style={{ color: 'var(--text2)' }}><strong style={{ color: 'var(--text)' }}>Tools:</strong> {project.tools}</span>
           </div>
         </div>
 
         <div style={{
-          background: project.color + '10', border: `1px solid ${project.color}25`,
+          background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
           borderRadius: 10, padding: '10px 14px',
           display: 'flex', alignItems: 'center', gap: 8,
         }}>
-          <Trophy size={14} style={{ color: project.color, flexShrink: 0 }} />
-          <span style={{ fontSize: '0.83rem', color: project.color, fontWeight: 600 }}>{project.outcome}</span>
+          <Trophy size={14} style={{ color: '#fff', flexShrink: 0 }} />
+          <span style={{ fontSize: '0.83rem', color: '#ccc', fontWeight: 600 }}>{project.outcome}</span>
         </div>
       </div>
     </motion.div>
@@ -154,13 +149,13 @@ export default function Projects() {
             whileTap={{ scale: 0.95 }}
             onClick={() => setActive(f)}
             style={{
-              padding: '9px 22px', borderRadius: 50, border: 'none', cursor: 'pointer',
+              padding: '9px 22px', borderRadius: 50, cursor: 'pointer',
               fontFamily: 'Space Grotesk, sans-serif', fontWeight: 600, fontSize: '0.88rem',
               transition: 'all 0.3s',
-              background: active === f ? 'linear-gradient(135deg, #7c3aed, #ec4899)' : 'var(--card)',
-              color: active === f ? '#fff' : 'var(--text2)',
-              border: active === f ? 'none' : '1px solid var(--border)',
-              boxShadow: active === f ? '0 0 20px rgba(124,58,237,0.4)' : 'none',
+              background: active === f ? '#fff' : 'var(--card)',
+              color: active === f ? '#000' : 'var(--text2)',
+              border: active === f ? '1px solid #fff' : '1px solid var(--border)',
+              boxShadow: active === f ? '0 0 20px rgba(255,255,255,0.2)' : 'none',
             }}
           >
             {f === 'all' ? '✨ All' : f === 'substation' ? '⚡ Substation' : f === 'commercial' ? '🏢 Commercial' : '🏭 Industrial'}

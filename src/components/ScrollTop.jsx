@@ -19,15 +19,15 @@ export default function ScrollTop() {
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1.5 }}
-        whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(124,58,237,0.6)' }}
+        whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(255,255,255,0.25)' }}
         whileTap={{ scale: 0.95 }}
         style={{
           position: 'fixed', bottom: 90, right: 24, zIndex: 999,
-          background: 'linear-gradient(135deg, #7c3aed, #ec4899)',
-          color: '#fff', padding: '12px 20px', borderRadius: 50,
+          background: '#fff',
+          color: '#000', padding: '12px 20px', borderRadius: 50,
           fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700, fontSize: '0.85rem',
           display: 'flex', alignItems: 'center', gap: 8,
-          boxShadow: '0 0 30px rgba(124,58,237,0.4)',
+          boxShadow: '0 0 30px rgba(255,255,255,0.15)',
           textDecoration: 'none',
         }}
       >
@@ -46,7 +46,7 @@ export default function ScrollTop() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             style={{
               position: 'fixed', bottom: 24, right: 24, zIndex: 999,
-              width: 48, height: 48, borderRadius: '50%', border: 'none',
+              width: 48, height: 48, borderRadius: '50%',
               background: 'var(--card)', border: '1px solid var(--border)',
               color: 'var(--text)', cursor: 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center',

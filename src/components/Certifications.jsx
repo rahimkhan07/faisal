@@ -8,21 +8,21 @@ const certs = [
     icon: <Award size={26} />,
     title: 'ASHRAE Member & Standards Practitioner',
     org: 'American Society of Heating, Refrigerating and Air-Conditioning Engineers',
-    color: '#f59e0b', bg: 'rgba(245,158,11,0.1)', border: 'rgba(245,158,11,0.25)',
+    color: '#fff', bg: 'rgba(255,255,255,0.07)', border: 'rgba(255,255,255,0.15)',
     emoji: '🏆',
   },
   {
     icon: <Monitor size={26} />,
     title: 'HAP Certified User',
     org: 'Hourly Analysis Program — Carrier Corporation',
-    color: '#a855f7', bg: 'rgba(168,85,247,0.1)', border: 'rgba(168,85,247,0.25)',
+    color: '#ccc', bg: 'rgba(255,255,255,0.05)', border: 'rgba(255,255,255,0.12)',
     emoji: '💻',
   },
   {
     icon: <PenTool size={26} />,
     title: 'AutoCAD Certified Professional',
     org: 'Autodesk Certified Professional in AutoCAD',
-    color: '#06b6d4', bg: 'rgba(6,182,212,0.1)', border: 'rgba(6,182,212,0.25)',
+    color: '#aaa', bg: 'rgba(255,255,255,0.04)', border: 'rgba(255,255,255,0.1)',
     emoji: '✏️',
   },
 ]
@@ -44,8 +44,8 @@ function CertCard({ cert, index }) {
         transition: 'border-color 0.3s, box-shadow 0.3s', cursor: 'default',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.borderColor = cert.color + '44'
-        e.currentTarget.style.boxShadow = `0 20px 50px ${cert.color}22`
+        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'
+        e.currentTarget.style.boxShadow = '0 20px 50px rgba(255,255,255,0.05)'
       }}
       onMouseLeave={e => {
         e.currentTarget.style.borderColor = 'var(--border)'
@@ -56,7 +56,7 @@ function CertCard({ cert, index }) {
         width: 60, height: 60, borderRadius: 16, flexShrink: 0,
         background: cert.bg, border: `1px solid ${cert.border}`,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        color: cert.color, fontSize: '1.5rem',
+        color: cert.color,
       }}>{cert.icon}</div>
       <div>
         <div style={{ fontSize: '1.2rem', marginBottom: 4 }}>{cert.emoji}</div>

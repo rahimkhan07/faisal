@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
+import SectionWrapper, { SectionTitle } from './SectionWrapper'
 
 // Linkedin icon was removed from lucide-react v1+; using inline SVG instead
 const LinkedinIcon = ({ size = 20 }) => (
@@ -11,13 +12,12 @@ const LinkedinIcon = ({ size = 20 }) => (
     <circle cx="4" cy="4" r="2"/>
   </svg>
 )
-import SectionWrapper, { SectionTitle } from './SectionWrapper'
 
 const contactItems = [
-  { icon: <Mail size={20} />, label: 'Email', value: 'er.mmdfaisal@gmail.com', href: 'mailto:er.mmdfaisal@gmail.com', color: '#a855f7' },
-  { icon: <Phone size={20} />, label: 'Phone', value: '+971 507 746 248', href: 'tel:+971507746248', color: '#06b6d4' },
-  { icon: <MapPin size={20} />, label: 'Location', value: 'Abu Dhabi, UAE', href: null, color: '#10b981' },
-  { icon: <LinkedinIcon size={20} />, label: 'LinkedIn', value: 'linkedin.com/in/mohammad-faisal', href: 'https://linkedin.com/in/mohammad-faisal', color: '#3b82f6' },
+  { icon: <Mail size={20} />, label: 'Email', value: 'er.mmdfaisal@gmail.com', href: 'mailto:er.mmdfaisal@gmail.com' },
+  { icon: <Phone size={20} />, label: 'Phone', value: '+971 507 746 248', href: 'tel:+971507746248' },
+  { icon: <MapPin size={20} />, label: 'Location', value: 'Abu Dhabi, UAE', href: null },
+  { icon: <LinkedinIcon size={20} />, label: 'LinkedIn', value: 'linkedin.com/in/mohammad-faisal', href: 'https://linkedin.com/in/mohammad-faisal' },
 ]
 
 export default function Contact() {
@@ -65,16 +65,16 @@ export default function Contact() {
               >
                 <div style={{
                   width: 48, height: 48, borderRadius: 12, flexShrink: 0,
-                  background: item.color + '15', border: `1px solid ${item.color}30`,
+                  background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  color: item.color,
+                  color: '#ccc',
                 }}>{item.icon}</div>
                 <div>
                   <div style={{ fontSize: '0.75rem', color: 'var(--text3)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 2 }}>{item.label}</div>
                   {item.href ? (
                     <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener"
                       style={{ color: 'var(--text)', fontWeight: 600, fontSize: '0.92rem', transition: 'color 0.2s' }}
-                      onMouseEnter={e => e.target.style.color = item.color}
+                      onMouseEnter={e => e.target.style.color = '#fff'}
                       onMouseLeave={e => e.target.style.color = 'var(--text)'}
                     >{item.value}</a>
                   ) : (
@@ -116,7 +116,7 @@ export default function Contact() {
                       color: 'var(--text)', fontFamily: 'Space Grotesk, sans-serif',
                       fontSize: '0.9rem', outline: 'none', transition: 'border-color 0.3s',
                     }}
-                    onFocus={e => e.target.style.borderColor = 'rgba(168,85,247,0.5)'}
+                    onFocus={e => e.target.style.borderColor = 'rgba(255,255,255,0.4)'}
                     onBlur={e => e.target.style.borderColor = 'var(--border)'}
                   />
                 </div>
@@ -135,7 +135,7 @@ export default function Contact() {
                   color: 'var(--text)', fontFamily: 'Space Grotesk, sans-serif',
                   fontSize: '0.9rem', outline: 'none', transition: 'border-color 0.3s',
                 }}
-                onFocus={e => e.target.style.borderColor = 'rgba(168,85,247,0.5)'}
+                onFocus={e => e.target.style.borderColor = 'rgba(255,255,255,0.4)'}
                 onBlur={e => e.target.style.borderColor = 'var(--border)'}
               />
             </div>
@@ -154,7 +154,7 @@ export default function Contact() {
                   fontSize: '0.9rem', outline: 'none', resize: 'vertical',
                   transition: 'border-color 0.3s',
                 }}
-                onFocus={e => e.target.style.borderColor = 'rgba(168,85,247,0.5)'}
+                onFocus={e => e.target.style.borderColor = 'rgba(255,255,255,0.4)'}
                 onBlur={e => e.target.style.borderColor = 'var(--border)'}
               />
             </div>
@@ -165,11 +165,12 @@ export default function Contact() {
               whileTap={{ scale: 0.98 }}
               style={{
                 width: '100%', padding: '14px', borderRadius: 12, border: 'none',
-                background: sent ? 'linear-gradient(135deg, #10b981, #06b6d4)' : 'linear-gradient(135deg, #7c3aed, #ec4899)',
-                color: '#fff', fontFamily: 'Space Grotesk, sans-serif',
+                background: sent ? 'rgba(255,255,255,0.15)' : '#fff',
+                color: sent ? '#fff' : '#000',
+                fontFamily: 'Space Grotesk, sans-serif',
                 fontWeight: 700, fontSize: '1rem', cursor: 'pointer',
                 display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-                boxShadow: sent ? '0 0 30px rgba(16,185,129,0.4)' : '0 0 30px rgba(124,58,237,0.4)',
+                boxShadow: sent ? 'none' : '0 0 30px rgba(255,255,255,0.15)',
                 transition: 'all 0.3s',
               }}
             >

@@ -8,25 +8,25 @@ const strengths = [
     icon: <Leaf size={22} />,
     title: 'Energy Efficiency',
     desc: 'Delivering 15–25% energy savings through optimized system design and smart controls.',
-    color: '#10b981', bg: 'rgba(16,185,129,0.1)', border: 'rgba(16,185,129,0.25)',
+    color: '#fff', bg: 'rgba(255,255,255,0.06)', border: 'rgba(255,255,255,0.15)',
   },
   {
     icon: <BookOpen size={22} />,
     title: 'ASHRAE Standards',
     desc: 'Full compliance with ASHRAE 90.1, 62.1, and 55 across all project types.',
-    color: '#a855f7', bg: 'rgba(168,85,247,0.1)', border: 'rgba(168,85,247,0.25)',
+    color: '#ccc', bg: 'rgba(255,255,255,0.05)', border: 'rgba(255,255,255,0.12)',
   },
   {
     icon: <ClipboardList size={22} />,
     title: 'Project Management',
     desc: 'End-to-end lifecycle management from initial design through commissioning.',
-    color: '#06b6d4', bg: 'rgba(6,182,212,0.1)', border: 'rgba(6,182,212,0.25)',
+    color: '#fff', bg: 'rgba(255,255,255,0.06)', border: 'rgba(255,255,255,0.15)',
   },
   {
     icon: <PenTool size={22} />,
     title: 'AutoCAD Design',
     desc: 'Precision HVAC drawings, submittals, and BOQs using AutoCAD and Revit MEP.',
-    color: '#f59e0b', bg: 'rgba(245,158,11,0.1)', border: 'rgba(245,158,11,0.25)',
+    color: '#ccc', bg: 'rgba(255,255,255,0.05)', border: 'rgba(255,255,255,0.12)',
   },
 ]
 
@@ -38,13 +38,13 @@ function StrengthCard({ item, index }) {
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ y: -6, boxShadow: `0 20px 40px ${item.bg}` }}
+      whileHover={{ y: -6, boxShadow: '0 20px 40px rgba(255,255,255,0.05)' }}
       style={{
-        background: 'var(--card)', border: `1px solid var(--border)`,
+        background: 'var(--card)', border: '1px solid var(--border)',
         borderRadius: 16, padding: '24px 20px', cursor: 'default',
         transition: 'border-color 0.3s',
       }}
-      onMouseEnter={e => e.currentTarget.style.borderColor = item.border}
+      onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'}
       onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--border)'}
     >
       <div style={{
@@ -75,25 +75,25 @@ export default function About() {
         >
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)',
+            background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)',
             borderRadius: 8, padding: '6px 14px', marginBottom: 20,
-            fontSize: '0.82rem', color: '#10b981', fontWeight: 600,
+            fontSize: '0.82rem', color: '#ccc', fontWeight: 600,
           }}>
             🏢 YORKS Air Conditioning & Refrigeration LLC
           </div>
 
           <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: 20, lineHeight: 1.3 }}>
             HVAC Design Engineer &{' '}
-            <span style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+            <span style={{ background: 'linear-gradient(135deg, #fff, #888)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Energy Specialist
             </span>
           </h3>
 
           <p style={{ color: 'var(--text2)', lineHeight: 1.85, marginBottom: 20, fontSize: '0.97rem' }}>
-            I'm an HVAC Project Design Engineer specializing in energy-efficient and high-performance indoor environments. I design HVAC systems that reduce energy consumption by <span style={{ color: '#a855f7', fontWeight: 600 }}>15–25%</span> while maintaining optimal comfort and air quality.
+            I'm an HVAC Project Design Engineer specializing in energy-efficient and high-performance indoor environments. I design HVAC systems that reduce energy consumption by <span style={{ color: '#fff', fontWeight: 600 }}>15–25%</span> while maintaining optimal comfort and air quality.
           </p>
           <p style={{ color: 'var(--text2)', lineHeight: 1.85, fontSize: '0.97rem' }}>
-            With hands-on experience in thermal load calculations, duct and piping design, equipment selection, and AutoCAD drafting, I deliver end-to-end HVAC solutions. I also hold an <span style={{ color: '#06b6d4', fontWeight: 600 }}>MBA in Marketing</span> — giving me a unique edge in client communication and project delivery. No cap. 🎓
+            With hands-on experience in thermal load calculations, duct and piping design, equipment selection, and AutoCAD drafting, I deliver end-to-end HVAC solutions. I also hold an <span style={{ color: '#ccc', fontWeight: 600 }}>MBA in Marketing</span> — giving me a unique edge in client communication and project delivery. No cap. 🎓
           </p>
 
           <div style={{ display: 'flex', gap: 24, marginTop: 32, flexWrap: 'wrap' }}>
@@ -105,7 +105,7 @@ export default function About() {
               <div key={i} style={{ textAlign: 'center' }}>
                 <div style={{
                   fontSize: '2rem', fontWeight: 800, fontFamily: 'Syne, sans-serif',
-                  background: 'linear-gradient(135deg, #a855f7, #06b6d4)',
+                  background: 'linear-gradient(135deg, #fff, #888)',
                   WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                 }}>{stat.num}</div>
                 <div style={{ fontSize: '0.8rem', color: 'var(--text3)', fontWeight: 500 }}>{stat.label}</div>

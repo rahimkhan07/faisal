@@ -18,13 +18,13 @@ export default function SectionWrapper({ children, id, style = {} }) {
   )
 }
 
-export function SectionTitle({ tag, title, sub, accent = '#a855f7' }) {
+export function SectionTitle({ tag, title, sub }) {
   return (
     <div style={{ marginBottom: 64, textAlign: 'center' }}>
       <div style={{
         display: 'inline-block', fontFamily: 'JetBrains Mono, monospace',
-        fontSize: '0.78rem', color: accent, letterSpacing: 3,
-        background: `rgba(124,58,237,0.1)`, border: `1px solid rgba(124,58,237,0.25)`,
+        fontSize: '0.78rem', color: '#aaa', letterSpacing: 3,
+        background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)',
         borderRadius: 50, padding: '5px 16px', marginBottom: 16, textTransform: 'uppercase',
       }}>{tag}</div>
       <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 800, marginBottom: 12, lineHeight: 1.2 }}>
@@ -33,7 +33,7 @@ export function SectionTitle({ tag, title, sub, accent = '#a855f7' }) {
       {sub && <p style={{ color: 'var(--text2)', fontSize: '1rem', maxWidth: 520, margin: '0 auto' }}>{sub}</p>}
       <div style={{
         width: 60, height: 3, borderRadius: 2,
-        background: 'linear-gradient(90deg, #7c3aed, #ec4899)',
+        background: 'linear-gradient(90deg, #fff, #555)',
         margin: '20px auto 0',
       }} />
     </div>

@@ -30,9 +30,9 @@ export default function Navbar() {
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
         padding: '0 24px',
-        background: scrolled ? 'rgba(10,10,15,0.85)' : 'transparent',
+        background: scrolled ? 'rgba(0,0,0,0.9)' : 'transparent',
         backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : 'none',
         transition: 'all 0.4s ease',
       }}
     >
@@ -41,13 +41,13 @@ export default function Navbar() {
         <a href="#hero" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <div style={{
             width: 38, height: 38, borderRadius: 10,
-            background: 'linear-gradient(135deg, #7c3aed, #ec4899)',
+            background: '#fff',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '1rem', color: '#fff',
-            boxShadow: '0 0 20px rgba(124,58,237,0.5)',
+            fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '1rem', color: '#000',
+            boxShadow: '0 0 20px rgba(255,255,255,0.2)',
           }}>MF</div>
           <span style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '1rem', color: '#fff', letterSpacing: 1 }}>
-            Mohammad<span style={{ color: '#a855f7' }}>.</span>
+            Mohammad<span style={{ color: '#888' }}>.</span>
           </span>
         </a>
 
@@ -59,15 +59,15 @@ export default function Navbar() {
                 href={`#${link.toLowerCase()}`}
                 style={{
                   padding: '8px 14px', borderRadius: 8, fontSize: '0.88rem', fontWeight: 500,
-                  color: active === link.toLowerCase() ? '#a855f7' : 'rgba(255,255,255,0.7)',
-                  background: active === link.toLowerCase() ? 'rgba(124,58,237,0.12)' : 'transparent',
+                  color: active === link.toLowerCase() ? '#fff' : 'rgba(255,255,255,0.55)',
+                  background: active === link.toLowerCase() ? 'rgba(255,255,255,0.1)' : 'transparent',
                   transition: 'all 0.2s', display: 'block',
-                  border: active === link.toLowerCase() ? '1px solid rgba(124,58,237,0.3)' : '1px solid transparent',
+                  border: active === link.toLowerCase() ? '1px solid rgba(255,255,255,0.2)' : '1px solid transparent',
                 }}
-                onMouseEnter={e => { e.target.style.color = '#fff'; e.target.style.background = 'rgba(255,255,255,0.06)' }}
+                onMouseEnter={e => { e.target.style.color = '#fff'; e.target.style.background = 'rgba(255,255,255,0.07)' }}
                 onMouseLeave={e => {
-                  e.target.style.color = active === link.toLowerCase() ? '#a855f7' : 'rgba(255,255,255,0.7)'
-                  e.target.style.background = active === link.toLowerCase() ? 'rgba(124,58,237,0.12)' : 'transparent'
+                  e.target.style.color = active === link.toLowerCase() ? '#fff' : 'rgba(255,255,255,0.55)'
+                  e.target.style.background = active === link.toLowerCase() ? 'rgba(255,255,255,0.1)' : 'transparent'
                 }}
               >{link}</a>
             </li>
@@ -75,13 +75,13 @@ export default function Navbar() {
           <li>
             <a href="mailto:er.mmdfaisal@gmail.com" style={{
               marginLeft: 8, padding: '9px 20px', borderRadius: 8,
-              background: 'linear-gradient(135deg, #7c3aed, #ec4899)',
-              color: '#fff', fontSize: '0.88rem', fontWeight: 600,
-              boxShadow: '0 0 20px rgba(124,58,237,0.3)',
+              background: '#fff',
+              color: '#000', fontSize: '0.88rem', fontWeight: 700,
+              boxShadow: '0 0 20px rgba(255,255,255,0.15)',
               transition: 'all 0.3s',
             }}
-              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 0 30px rgba(124,58,237,0.5)' }}
-              onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 0 20px rgba(124,58,237,0.3)' }}
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 0 30px rgba(255,255,255,0.3)' }}
+              onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 0 20px rgba(255,255,255,0.15)' }}
             >Hire Me ✨</a>
           </li>
         </ul>
@@ -114,7 +114,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             style={{
-              background: 'rgba(10,10,15,0.98)', borderTop: '1px solid rgba(255,255,255,0.06)',
+              background: 'rgba(0,0,0,0.98)', borderTop: '1px solid rgba(255,255,255,0.06)',
               padding: '16px 24px 24px',
             }}
           >

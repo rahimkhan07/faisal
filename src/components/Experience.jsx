@@ -28,7 +28,7 @@ export default function Experience() {
         {/* Timeline line */}
         <div style={{
           position: 'absolute', left: 28, top: 0, bottom: 0, width: 2,
-          background: 'linear-gradient(180deg, #7c3aed, #ec4899, transparent)',
+          background: 'linear-gradient(180deg, #fff, #444, transparent)',
         }} />
 
         <motion.div
@@ -41,8 +41,8 @@ export default function Experience() {
           {/* Dot */}
           <div style={{
             position: 'absolute', left: 18, top: 28, width: 22, height: 22,
-            borderRadius: '50%', background: 'linear-gradient(135deg, #7c3aed, #ec4899)',
-            border: '3px solid var(--bg)', boxShadow: '0 0 20px rgba(124,58,237,0.6)',
+            borderRadius: '50%', background: '#fff',
+            border: '3px solid var(--bg)', boxShadow: '0 0 20px rgba(255,255,255,0.3)',
           }} />
 
           <div style={{
@@ -53,18 +53,18 @@ export default function Experience() {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 12, marginBottom: 8 }}>
               <h3 style={{ fontSize: '1.3rem', fontWeight: 800 }}>HVAC Project Design Engineer</h3>
               <span style={{
-                background: 'linear-gradient(135deg, #7c3aed, #ec4899)',
-                color: '#fff', padding: '6px 16px', borderRadius: 50,
+                background: '#fff', color: '#000',
+                padding: '6px 16px', borderRadius: 50,
                 fontSize: '0.8rem', fontWeight: 700, whiteSpace: 'nowrap',
                 fontFamily: 'JetBrains Mono, monospace',
               }}>2021 – Present</span>
             </div>
 
-            <div style={{ color: '#a855f7', fontWeight: 700, fontSize: '1rem', marginBottom: 4 }}>
+            <div style={{ color: '#ccc', fontWeight: 700, fontSize: '1rem', marginBottom: 4 }}>
               YORKS Air Conditioning & Refrigeration LLC
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--text2)', fontSize: '0.85rem', marginBottom: 28 }}>
-              <MapPin size={13} style={{ color: '#06b6d4' }} /> Abu Dhabi, UAE
+              <MapPin size={13} style={{ color: '#888' }} /> Abu Dhabi, UAE
             </div>
 
             {/* Responsibilities */}
@@ -79,7 +79,7 @@ export default function Experience() {
                 >
                   <span style={{
                     width: 6, height: 6, borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #7c3aed, #ec4899)',
+                    background: '#fff',
                     flexShrink: 0, marginTop: 8,
                   }} />
                   {r}
@@ -94,12 +94,12 @@ export default function Experience() {
               transition={{ duration: 0.5, delay: 0.9 }}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 10,
-                background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.3)',
+                background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.15)',
                 borderRadius: 50, padding: '10px 20px',
-                fontSize: '0.88rem', fontWeight: 700, color: '#f59e0b',
+                fontSize: '0.88rem', fontWeight: 700, color: '#fff',
               }}
             >
-              <Star size={16} fill="#f59e0b" /> 15–25% avg energy savings across all projects
+              <Star size={16} fill="#fff" /> 15–25% avg energy savings across all projects
             </motion.div>
           </div>
         </motion.div>

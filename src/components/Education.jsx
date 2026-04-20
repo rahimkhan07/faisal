@@ -9,7 +9,7 @@ const edu = [
     degree: 'MBA in Marketing',
     school: 'University (Available on Request)',
     year: '2019 – 2021',
-    color: '#a855f7', bg: 'rgba(168,85,247,0.1)', border: 'rgba(168,85,247,0.25)',
+    color: '#fff', bg: 'rgba(255,255,255,0.06)', border: 'rgba(255,255,255,0.15)',
     tag: 'Business',
     emoji: '🎓',
   },
@@ -18,7 +18,7 @@ const edu = [
     degree: 'Bachelor of Engineering',
     school: 'Mechanical / HVAC Engineering',
     year: '2015 – 2019',
-    color: '#06b6d4', bg: 'rgba(6,182,212,0.1)', border: 'rgba(6,182,212,0.25)',
+    color: '#ccc', bg: 'rgba(255,255,255,0.05)', border: 'rgba(255,255,255,0.12)',
     tag: 'Engineering',
     emoji: '⚙️',
   },
@@ -40,8 +40,8 @@ function EduCard({ item, index }) {
         transition: 'border-color 0.3s, box-shadow 0.3s', cursor: 'default',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.borderColor = item.color + '44'
-        e.currentTarget.style.boxShadow = `0 20px 50px ${item.color}22`
+        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'
+        e.currentTarget.style.boxShadow = '0 20px 50px rgba(255,255,255,0.05)'
       }}
       onMouseLeave={e => {
         e.currentTarget.style.borderColor = 'var(--border)'
@@ -63,17 +63,17 @@ function EduCard({ item, index }) {
 
       <span style={{
         display: 'inline-block', fontSize: '0.72rem', fontWeight: 700,
-        color: item.color, background: item.color + '18',
-        border: `1px solid ${item.color}33`,
+        color: '#aaa', background: 'rgba(255,255,255,0.07)',
+        border: '1px solid rgba(255,255,255,0.12)',
         borderRadius: 50, padding: '3px 12px', letterSpacing: 1.5,
         textTransform: 'uppercase', marginBottom: 12,
         fontFamily: 'JetBrains Mono, monospace',
       }}>{item.tag}</span>
 
       <h3 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: 6 }}>{item.degree}</h3>
-      <p style={{ color: item.color, fontWeight: 600, fontSize: '0.9rem', marginBottom: 12 }}>{item.school}</p>
+      <p style={{ color: '#aaa', fontWeight: 600, fontSize: '0.9rem', marginBottom: 12 }}>{item.school}</p>
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--text2)', fontSize: '0.85rem' }}>
-        <Calendar size={13} style={{ color: item.color }} /> {item.year}
+        <Calendar size={13} style={{ color: '#888' }} /> {item.year}
       </div>
     </motion.div>
   )
