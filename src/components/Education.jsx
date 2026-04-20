@@ -6,20 +6,22 @@ import SectionWrapper, { SectionTitle } from './SectionWrapper'
 const edu = [
   {
     icon: <Briefcase size={24} />,
-    degree: 'MBA in Marketing',
-    school: 'University (Available on Request)',
-    year: '2019 – 2021',
+    degree: 'Master of Business Administration',
+    field: 'Faculty of Commerce — Marketing',
+    school: 'Integral University, Lucknow, India',
+    year: '2022 – 2024',
     color: '#fff', bg: 'rgba(255,255,255,0.06)', border: 'rgba(255,255,255,0.15)',
-    tag: 'Business',
+    tag: 'MBA',
     emoji: '🎓',
   },
   {
     icon: <Cog size={24} />,
-    degree: 'Bachelor of Engineering',
-    school: 'Mechanical / HVAC Engineering',
-    year: '2015 – 2019',
+    degree: 'Bachelor of Mechanical Engineering',
+    field: 'Mechanical Engineering',
+    school: 'Integral University, Lucknow, India',
+    year: '2017 – 2021',
     color: '#ccc', bg: 'rgba(255,255,255,0.05)', border: 'rgba(255,255,255,0.12)',
-    tag: 'Engineering',
+    tag: 'B.E.',
     emoji: '⚙️',
   },
 ]
@@ -48,11 +50,7 @@ function EduCard({ item, index }) {
         e.currentTarget.style.boxShadow = 'none'
       }}
     >
-      {/* Background emoji */}
-      <div style={{
-        position: 'absolute', right: 20, top: 20,
-        fontSize: '4rem', opacity: 0.06, userSelect: 'none',
-      }}>{item.emoji}</div>
+      <div style={{ position: 'absolute', right: 20, top: 20, fontSize: '4rem', opacity: 0.06, userSelect: 'none' }}>{item.emoji}</div>
 
       <div style={{
         width: 56, height: 56, borderRadius: 14,
@@ -67,11 +65,11 @@ function EduCard({ item, index }) {
         border: '1px solid rgba(255,255,255,0.12)',
         borderRadius: 50, padding: '3px 12px', letterSpacing: 1.5,
         textTransform: 'uppercase', marginBottom: 12,
-        fontFamily: 'JetBrains Mono, monospace',
       }}>{item.tag}</span>
 
-      <h3 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: 6 }}>{item.degree}</h3>
-      <p style={{ color: '#aaa', fontWeight: 600, fontSize: '0.9rem', marginBottom: 12 }}>{item.school}</p>
+      <h3 style={{ fontSize: '1.15rem', fontWeight: 800, marginBottom: 4 }}>{item.degree}</h3>
+      <p style={{ color: '#ccc', fontWeight: 600, fontSize: '0.88rem', marginBottom: 4 }}>{item.field}</p>
+      <p style={{ color: '#888', fontSize: '0.84rem', marginBottom: 12 }}>{item.school}</p>
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--text2)', fontSize: '0.85rem' }}>
         <Calendar size={13} style={{ color: '#888' }} /> {item.year}
       </div>
@@ -83,9 +81,10 @@ export default function Education() {
   return (
     <SectionWrapper id="education" style={{ background: 'var(--bg2)' }}>
       <SectionTitle
+        roman="V"
         tag="// education.log"
         title="My academic journey 📚"
-        sub="Engineering expertise meets business acumen"
+        sub="Engineering foundation meets business and marketing expertise"
       />
       <div style={{
         display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',

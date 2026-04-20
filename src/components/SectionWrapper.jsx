@@ -18,11 +18,17 @@ export default function SectionWrapper({ children, id, style = {} }) {
   )
 }
 
-export function SectionTitle({ tag, title, sub }) {
+export function SectionTitle({ tag, title, sub, roman }) {
   return (
     <div style={{ marginBottom: 64, textAlign: 'center' }}>
+      {roman && (
+        <div style={{
+          fontSize: '0.7rem', color: 'var(--text3)', letterSpacing: 6,
+          textTransform: 'uppercase', marginBottom: 8, fontWeight: 700,
+        }}>{roman}</div>
+      )}
       <div style={{
-        display: 'inline-block', fontFamily: 'JetBrains Mono, monospace',
+        display: 'inline-block',
         fontSize: '0.78rem', color: '#aaa', letterSpacing: 3,
         background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)',
         borderRadius: 50, padding: '5px 16px', marginBottom: 16, textTransform: 'uppercase',

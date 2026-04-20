@@ -25,7 +25,7 @@ export default function ScrollTop() {
           position: 'fixed', bottom: 90, right: 24, zIndex: 999,
           background: '#fff',
           color: '#000', padding: '12px 20px', borderRadius: 50,
-          fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700, fontSize: '0.85rem',
+          fontWeight: 700, fontSize: '0.85rem',
           display: 'flex', alignItems: 'center', gap: 8,
           boxShadow: '0 0 30px rgba(255,255,255,0.15)',
           textDecoration: 'none',

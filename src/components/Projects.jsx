@@ -92,7 +92,6 @@ function ProjectCard({ project, index }) {
               border: '1px solid rgba(255,255,255,0.12)',
               borderRadius: 50, padding: '3px 12px', letterSpacing: 1.5,
               textTransform: 'uppercase', marginBottom: 10,
-              fontFamily: 'JetBrains Mono, monospace',
             }}>{project.category}</span>
             <h3 style={{ fontSize: '1.05rem', fontWeight: 700, lineHeight: 1.4 }}>{project.title}</h3>
           </div>
@@ -136,6 +135,7 @@ export default function Projects() {
   return (
     <SectionWrapper id="projects" style={{ background: 'var(--bg2)' }}>
       <SectionTitle
+        roman="III"
         tag="// projects.showcase"
         title="Things I've built 🔧"
         sub="Real-world HVAC projects across substations, commercial, and industrial sectors"
@@ -150,7 +150,7 @@ export default function Projects() {
             onClick={() => setActive(f)}
             style={{
               padding: '9px 22px', borderRadius: 50, cursor: 'pointer',
-              fontFamily: 'Space Grotesk, sans-serif', fontWeight: 600, fontSize: '0.88rem',
+              fontWeight: 600, fontSize: '0.88rem',
               transition: 'all 0.3s',
               background: active === f ? '#fff' : 'var(--card)',
               color: active === f ? '#000' : 'var(--text2)',

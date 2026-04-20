@@ -1,31 +1,31 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Leaf, BookOpen, ClipboardList, PenTool } from 'lucide-react'
+import { Wrench, BarChart2, TrendingUp, Settings } from 'lucide-react'
 import SectionWrapper, { SectionTitle } from './SectionWrapper'
 
 const strengths = [
   {
-    icon: <Leaf size={22} />,
-    title: 'Energy Efficiency',
-    desc: 'Delivering 15–25% energy savings through optimized system design and smart controls.',
+    icon: <Wrench size={22} />,
+    title: 'MEP Project Management',
+    desc: 'End-to-end MEP project planning, execution, quality control, and commissioning for commercial & residential buildings.',
     color: '#fff', bg: 'rgba(255,255,255,0.06)', border: 'rgba(255,255,255,0.15)',
   },
   {
-    icon: <BookOpen size={22} />,
-    title: 'ASHRAE Standards',
-    desc: 'Full compliance with ASHRAE 90.1, 62.1, and 55 across all project types.',
+    icon: <Settings size={22} />,
+    title: 'HVAC Design & Execution',
+    desc: 'Heating/cooling load calculations, equipment selection, BOQ preparation, and full HVAC system installation & commissioning.',
     color: '#ccc', bg: 'rgba(255,255,255,0.05)', border: 'rgba(255,255,255,0.12)',
   },
   {
-    icon: <ClipboardList size={22} />,
-    title: 'Project Management',
-    desc: 'End-to-end lifecycle management from initial design through commissioning.',
+    icon: <TrendingUp size={22} />,
+    title: 'Digital Marketing & CRM',
+    desc: 'Skilled in digital marketing tools, CRM, data analysis, and sales management from MBA training and internships.',
     color: '#fff', bg: 'rgba(255,255,255,0.06)', border: 'rgba(255,255,255,0.15)',
   },
   {
-    icon: <PenTool size={22} />,
-    title: 'AutoCAD Design',
-    desc: 'Precision HVAC drawings, submittals, and BOQs using AutoCAD and Revit MEP.',
+    icon: <BarChart2 size={22} />,
+    title: 'Portfolio Management',
+    desc: 'Real estate portfolio optimization, KPI tracking, risk mitigation, and investment performance reporting.',
     color: '#ccc', bg: 'rgba(255,255,255,0.05)', border: 'rgba(255,255,255,0.12)',
   },
 ]
@@ -64,7 +64,7 @@ export default function About() {
 
   return (
     <SectionWrapper id="about" style={{ background: 'var(--bg2)' }}>
-      <SectionTitle tag="// about me" title="Who am I? 👋" sub="Engineer by day, problem-solver by nature" />
+      <SectionTitle roman="I" tag="// about me" title="Who am I? 👋" sub="Engineer by profession, marketer by education" />
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'start' }} className="about-grid">
         <motion.div
@@ -79,32 +79,32 @@ export default function About() {
             borderRadius: 8, padding: '6px 14px', marginBottom: 20,
             fontSize: '0.82rem', color: '#ccc', fontWeight: 600,
           }}>
-            🏢 YORKS Air Conditioning & Refrigeration LLC
+            🏗️ Dhreesti Airtech Solution · Moneymonial Reality · Dubai, UAE
           </div>
 
           <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: 20, lineHeight: 1.3 }}>
-            HVAC Design Engineer &{' '}
+            Mechanical Engineer &{' '}
             <span style={{ background: 'linear-gradient(135deg, #fff, #888)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-              Energy Specialist
+              MEP Specialist
             </span>
           </h3>
 
           <p style={{ color: 'var(--text2)', lineHeight: 1.85, marginBottom: 20, fontSize: '0.97rem' }}>
-            I'm an HVAC Project Design Engineer specializing in energy-efficient and high-performance indoor environments. I design HVAC systems that reduce energy consumption by <span style={{ color: '#fff', fontWeight: 600 }}>15–25%</span> while maintaining optimal comfort and air quality.
+            Motivated and collaborative Mechanical Engineer with <span style={{ color: '#fff', fontWeight: 600 }}>5+ years of experience</span> in MEP works for commercial & residential projects. Expertise in HVAC system design, site execution, commissioning, and quality control.
           </p>
           <p style={{ color: 'var(--text2)', lineHeight: 1.85, fontSize: '0.97rem' }}>
-            With hands-on experience in thermal load calculations, duct and piping design, equipment selection, and AutoCAD drafting, I deliver end-to-end HVAC solutions. I also hold an <span style={{ color: '#ccc', fontWeight: 600 }}>MBA in Marketing</span> — giving me a unique edge in client communication and project delivery. No cap. 🎓
+            Additionally holds an <span style={{ color: '#ccc', fontWeight: 600 }}>MBA in Marketing</span> from Integral University and has worked as a <span style={{ color: '#ccc', fontWeight: 600 }}>Sr. Associate Portfolio Manager</span> at Moneymonial Reality, Dubai — bringing a rare combination of engineering depth and business acumen. 🎓
           </p>
 
           <div style={{ display: 'flex', gap: 24, marginTop: 32, flexWrap: 'wrap' }}>
             {[
-              { num: '4+', label: 'Years Exp.' },
-              { num: '20+', label: 'Projects' },
-              { num: '25%', label: 'Max Energy Saved' },
+              { num: 'V+', label: 'Years Exp.' },
+              { num: 'MEP', label: 'Specialist' },
+              { num: 'MBA', label: 'Marketing' },
             ].map((stat, i) => (
               <div key={i} style={{ textAlign: 'center' }}>
                 <div style={{
-                  fontSize: '2rem', fontWeight: 800, fontFamily: 'Syne, sans-serif',
+                  fontSize: '2rem', fontWeight: 800,
                   background: 'linear-gradient(135deg, #fff, #888)',
                   WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                 }}>{stat.num}</div>

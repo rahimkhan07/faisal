@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Wind, MapPin, Zap, ArrowDown } from 'lucide-react'
+import { Wrench, MapPin, Briefcase, ArrowDown } from 'lucide-react'
 import profileImg from '../assets/profile.jpg'
 
 const floatAnim = {
@@ -10,19 +10,24 @@ export default function Hero() {
   return (
     <section id="hero" style={{
       minHeight: '100vh', display: 'flex', alignItems: 'center',
-      background: 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255,255,255,0.05) 0%, transparent 70%), var(--bg)',
+      background: 'radial-gradient(ellipse 100% 70% at 50% 0%, rgba(255,255,255,0.07) 0%, transparent 65%)',
       position: 'relative', overflow: 'hidden', paddingTop: 80,
     }}>
-      {/* Animated grid */}
+      {/* Fine grid overlay */}
       <div style={{
         position: 'absolute', inset: 0, zIndex: 0,
-        backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-        backgroundSize: '60px 60px',
+        backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
+        backgroundSize: '80px 80px',
+        mask: 'radial-gradient(ellipse 90% 80% at 50% 40%, black 30%, transparent 100%)',
+        WebkitMask: 'radial-gradient(ellipse 90% 80% at 50% 40%, black 30%, transparent 100%)',
       }} />
-
-      {/* Glow orbs */}
-      <div style={{ position: 'absolute', top: '20%', left: '10%', width: 400, height: 400, borderRadius: '50%', background: 'rgba(255,255,255,0.03)', filter: 'blur(80px)', zIndex: 0 }} />
-      <div style={{ position: 'absolute', bottom: '20%', right: '10%', width: 300, height: 300, borderRadius: '50%', background: 'rgba(255,255,255,0.03)', filter: 'blur(80px)', zIndex: 0 }} />
+      <div style={{
+        position: 'absolute', left: 0, right: 0, height: 1, zIndex: 0,
+        background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.12) 30%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.12) 70%, transparent 100%)',
+        top: '38%', filter: 'blur(1px)',
+      }} />
+      <div style={{ position: 'absolute', top: '10%', right: '5%', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 70%)', filter: 'blur(30px)', zIndex: 0 }} />
+      <div style={{ position: 'absolute', bottom: '15%', left: '0%', width: 350, height: 350, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%)', filter: 'blur(40px)', zIndex: 0 }} />
 
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '60px 24px', width: '100%', position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center' }} className="hero-grid">
@@ -50,15 +55,9 @@ export default function Hero() {
               style={{ fontSize: 'clamp(2.4rem, 5vw, 4rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: 16 }}
             >
               Hey, I'm{' '}
-              <span style={{
-                background: 'linear-gradient(135deg, #fff, #888)',
-                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-              }}>Mohammad</span>
+              <span style={{ background: 'linear-gradient(135deg, #fff, #888)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Md</span>
               <br />
-              <span style={{
-                background: 'linear-gradient(135deg, #ccc, #fff)',
-                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-              }}>Faisal</span>
+              <span style={{ background: 'linear-gradient(135deg, #ccc, #fff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Faisal</span>
             </motion.h1>
 
             <motion.div
@@ -68,19 +67,19 @@ export default function Hero() {
               style={{
                 display: 'inline-block', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.15)',
                 borderRadius: 8, padding: '6px 14px', marginBottom: 20,
-                fontFamily: 'JetBrains Mono, monospace', fontSize: '0.85rem', color: '#ccc',
+                fontSize: '0.85rem', color: '#ccc',
               }}
             >
-              &lt;HVAC Project Design Engineer /&gt;
+              &lt;Mechanical Engineer · MEP Specialist /&gt;
             </motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              style={{ fontSize: '1.1rem', color: 'var(--text2)', lineHeight: 1.75, marginBottom: 36, maxWidth: 480 }}
+              style={{ fontSize: '1.05rem', color: 'var(--text2)', lineHeight: 1.75, marginBottom: 36, maxWidth: 480 }}
             >
-              Designing <span style={{ color: '#fff', fontWeight: 600 }}>energy-efficient HVAC systems</span> for smart buildings in the UAE. Saving 15–25% energy while keeping it 🔥 cool inside.
+              Motivated Mechanical Engineer with <span style={{ color: '#fff', fontWeight: 600 }}>5+ years of experience</span> in MEP works for commercial & residential projects. Skilled in HVAC design, site execution, commissioning, and portfolio management. Based in Dubai, UAE.
             </motion.p>
 
             <motion.div
@@ -89,9 +88,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 40 }}
             >
-              <a href="#projects" style={{
-                padding: '14px 28px', borderRadius: 12,
-                background: '#fff',
+              <a href="#experience" style={{
+                padding: '14px 28px', borderRadius: 12, background: '#fff',
                 color: '#000', fontWeight: 700, fontSize: '0.95rem',
                 boxShadow: '0 0 30px rgba(255,255,255,0.2)',
                 transition: 'all 0.3s', display: 'inline-flex', alignItems: 'center', gap: 8,
@@ -99,7 +97,7 @@ export default function Hero() {
                 onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 0 50px rgba(255,255,255,0.35)' }}
                 onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 0 30px rgba(255,255,255,0.2)' }}
               >
-                View Projects 🚀
+                View Experience 💼
               </a>
               <a href="#contact" style={{
                 padding: '14px 28px', borderRadius: 12,
@@ -115,7 +113,6 @@ export default function Hero() {
               </a>
             </motion.div>
 
-            {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -123,15 +120,14 @@ export default function Hero() {
               style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}
             >
               {[
-                { icon: <Zap size={14} />, text: '15–25% Energy Savings' },
-                { icon: <MapPin size={14} />, text: 'Abu Dhabi, UAE' },
-                { icon: <Wind size={14} />, text: 'ASHRAE Certified' },
+                { icon: <Wrench size={14} />, text: '5+ Years MEP Experience' },
+                { icon: <MapPin size={14} />, text: 'Dubai, UAE' },
+                { icon: <Briefcase size={14} />, text: 'MBA + B.E. Mechanical' },
               ].map((badge, i) => (
                 <span key={i} style={{
                   display: 'inline-flex', alignItems: 'center', gap: 6,
                   background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
-                  borderRadius: 50, padding: '6px 14px', fontSize: '0.8rem', color: '#aaa',
-                  fontWeight: 500,
+                  borderRadius: 50, padding: '6px 14px', fontSize: '0.8rem', color: '#aaa', fontWeight: 500,
                 }}>
                   {badge.icon} {badge.text}
                 </span>
@@ -147,62 +143,27 @@ export default function Hero() {
             style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
           >
             <div style={{ position: 'relative', width: 360, height: 360 }}>
-              {/* Rotating ring */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                style={{
-                  position: 'absolute', inset: -16, borderRadius: '50%',
-                  border: '2px dashed rgba(255,255,255,0.2)',
-                }}
+                style={{ position: 'absolute', inset: -16, borderRadius: '50%', border: '2px dashed rgba(255,255,255,0.2)' }}
               />
-              {/* Glow ring */}
-              <div style={{
-                position: 'absolute', inset: -8, borderRadius: '50%',
-                background: 'conic-gradient(from 0deg, #fff, #555, #aaa, #fff)',
-                padding: 3,
-              }}>
+              <div style={{ position: 'absolute', inset: -8, borderRadius: '50%', background: 'conic-gradient(from 0deg, #fff, #555, #aaa, #fff)', padding: 3 }}>
                 <div style={{ width: '100%', height: '100%', borderRadius: '50%', background: 'var(--bg)' }} />
               </div>
-              {/* Photo */}
-              {profileImg ? (
-                <img
-                  src={profileImg}
-                  alt="Mohammad Faisal"
-                  style={{
-                    position: 'absolute', inset: 4, width: 'calc(100% - 8px)', height: 'calc(100% - 8px)',
-                    borderRadius: '50%', objectFit: 'cover', objectPosition: 'top',
-                  }}
-                />
-              ) : (
-                <div style={{
-                  position: 'absolute', inset: 4, width: 'calc(100% - 8px)', height: 'calc(100% - 8px)',
-                  borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #111, #222)',
-                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                  gap: 8,
-                }}>
-                  <div style={{
-                    fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '4rem',
-                    background: 'linear-gradient(135deg, #fff, #888)',
-                    WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                  }}>MF</div>
-                  <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.3)', textAlign: 'center', padding: '0 20px' }}>
-                    Add profile.jpg to src/assets/
-                  </div>
-                </div>
-              )}
-              {/* Floating badges */}
+              <img
+                src={profileImg}
+                alt="Md Faisal"
+                style={{ position: 'absolute', inset: 4, width: 'calc(100% - 8px)', height: 'calc(100% - 8px)', borderRadius: '50%', objectFit: 'cover', objectPosition: 'top' }}
+              />
               <motion.div {...floatAnim} style={{
                 position: 'absolute', top: 10, right: -30,
                 background: 'rgba(30,30,30,0.95)', backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(255,255,255,0.15)',
-                borderRadius: 12, padding: '10px 14px',
+                border: '1px solid rgba(255,255,255,0.15)', borderRadius: 12, padding: '10px 14px',
                 fontSize: '0.78rem', fontWeight: 700, color: '#fff',
-                boxShadow: '0 0 20px rgba(255,255,255,0.08)',
-                whiteSpace: 'nowrap',
+                boxShadow: '0 0 20px rgba(255,255,255,0.08)', whiteSpace: 'nowrap',
               }}>
-                ⚡ ASHRAE Standards
+                ⚙️ MEP Site Engineer
               </motion.div>
               <motion.div
                 animate={{ y: [0, 10, 0] }}
@@ -210,20 +171,17 @@ export default function Hero() {
                 style={{
                   position: 'absolute', bottom: 20, left: -40,
                   background: 'rgba(30,30,30,0.95)', backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255,255,255,0.15)',
-                  borderRadius: 12, padding: '10px 14px',
+                  border: '1px solid rgba(255,255,255,0.15)', borderRadius: 12, padding: '10px 14px',
                   fontSize: '0.78rem', fontWeight: 700, color: '#fff',
-                  boxShadow: '0 0 20px rgba(255,255,255,0.08)',
-                  whiteSpace: 'nowrap',
+                  boxShadow: '0 0 20px rgba(255,255,255,0.08)', whiteSpace: 'nowrap',
                 }}
               >
-                🌿 25% Energy Saved
+                🎓 MBA Marketing
               </motion.div>
             </div>
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

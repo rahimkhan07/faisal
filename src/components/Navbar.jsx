@@ -43,10 +43,10 @@ export default function Navbar() {
             width: 38, height: 38, borderRadius: 10,
             background: '#fff',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '1rem', color: '#000',
+            fontWeight: 800, fontSize: '1rem', color: '#000',
             boxShadow: '0 0 20px rgba(255,255,255,0.2)',
           }}>MF</div>
-          <span style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '1rem', color: '#fff', letterSpacing: 1 }}>
+          <span style={{ fontWeight: 700, fontSize: '1rem', color: '#fff', letterSpacing: 1 }}>
             Mohammad<span style={{ color: '#888' }}>.</span>
           </span>
         </a>

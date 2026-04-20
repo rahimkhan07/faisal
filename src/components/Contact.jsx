@@ -15,8 +15,9 @@ const LinkedinIcon = ({ size = 20 }) => (
 
 const contactItems = [
   { icon: <Mail size={20} />, label: 'Email', value: 'er.mmdfaisal@gmail.com', href: 'mailto:er.mmdfaisal@gmail.com' },
-  { icon: <Phone size={20} />, label: 'Phone', value: '+971 507 746 248', href: 'tel:+971507746248' },
-  { icon: <MapPin size={20} />, label: 'Location', value: 'Abu Dhabi, UAE', href: null },
+  { icon: <Phone size={20} />, label: 'Phone (UAE)', value: '+971 581 943 370', href: 'tel:+971581943370' },
+  { icon: <Phone size={20} />, label: 'Phone (India)', value: '+91 977 154 5263', href: 'tel:+919771545263' },
+  { icon: <MapPin size={20} />, label: 'Location', value: 'Dubai Investment Park, UAE', href: null },
   { icon: <LinkedinIcon size={20} />, label: 'LinkedIn', value: 'linkedin.com/in/mohammad-faisal-2b824119b', href: 'https://www.linkedin.com/in/mohammad-faisal-2b824119b/' },
 ]
 
@@ -36,6 +37,7 @@ export default function Contact() {
   return (
     <SectionWrapper id="contact" style={{ background: 'var(--bg2)' }}>
       <SectionTitle
+        roman="VII"
         tag="// contact.init()"
         title="Let's build something 🤝"
         sub="Got a project? Let's talk HVAC, energy efficiency, or just say hi."

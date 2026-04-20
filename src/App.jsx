@@ -11,12 +11,42 @@ import Footer from './components/Footer'
 import ScrollTop from './components/ScrollTop'
 import './index.css'
 
+// Generate particles once
+const particles = Array.from({ length: 28 }, (_, i) => ({
+  id: i,
+  size: Math.random() * 2.5 + 0.5,
+  left: Math.random() * 100,
+  delay: Math.random() * 20,
+  duration: Math.random() * 18 + 14,
+}))
+
 export default function App() {
   return (
     <>
+      {/* Global animated background */}
+      <div className="bg-canvas" aria-hidden="true">
+        <div className="bg-orb-1" />
+        <div className="bg-orb-2" />
+        <div className="bg-orb-3" />
+        <div className="bg-spotlight" />
+        {particles.map(p => (
+          <div
+            key={p.id}
+            className="bg-particle"
+            style={{
+              width: p.size,
+              height: p.size,
+              left: `${p.left}%`,
+              animationDelay: `${p.delay}s`,
+              animationDuration: `${p.duration}s`,
+            }}
+          />
+        ))}
+      </div>
+
       <div className="noise" aria-hidden="true" />
       <Navbar />
-      <main>
+      <main style={{ position: 'relative', zIndex: 1 }}>
         <Hero />
         <About />
         <Skills />

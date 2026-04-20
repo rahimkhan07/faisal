@@ -28,13 +28,13 @@ export default function Footer() {
                 width: 40, height: 40, borderRadius: 10,
                 background: '#fff',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '1rem', color: '#000',
+                fontWeight: 800, fontSize: '1rem', color: '#000',
                 boxShadow: '0 0 20px rgba(255,255,255,0.15)',
               }}>MF</div>
-              <span style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '1.1rem' }}>Mohammad Faisal</span>
+              <span style={{ fontWeight: 700, fontSize: '1.1rem' }}>Mohammad Faisal</span>
             </div>
             <p style={{ color: 'var(--text2)', fontSize: '0.88rem', lineHeight: 1.7, maxWidth: 260 }}>
-              HVAC Project Design Engineer crafting energy-efficient systems for smart buildings in the UAE. 🌬️
+              Mechanical Engineer & MEP Specialist with 5+ years of experience, an MBA in Marketing, and expertise in HVAC, portfolio management, and digital marketing. Based in Dubai, UAE. 🔧
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {[
                 { icon: <Mail size={14} />, text: 'er.mmdfaisal@gmail.com', href: 'mailto:er.mmdfaisal@gmail.com' },
-                { icon: <Phone size={14} />, text: '+971 507 746 248', href: 'tel:+971507746248' },
+                { icon: <Phone size={14} />, text: '+971 581 943 370', href: 'tel:+971581943370' },
                 { icon: <LinkedinIcon size={14} />, text: 'LinkedIn Profile', href: 'https://www.linkedin.com/in/mohammad-faisal-2b824119b/' },
               ].map((item, i) => (
                 <a key={i} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener"
