@@ -1,5 +1,14 @@
 import { motion } from 'framer-motion'
-import { Mail, Phone, Linkedin, Wind } from 'lucide-react'
+import { Mail, Phone } from 'lucide-react'
+
+// Linkedin icon was removed from lucide-react v1+; using inline SVG instead
+const LinkedinIcon = ({ size = 16 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+    <rect x="2" y="9" width="4" height="12"/>
+    <circle cx="4" cy="4" r="2"/>
+  </svg>
+)
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -50,7 +59,7 @@ export default function Footer() {
               {[
                 { icon: <Mail size={14} />, text: 'er.mmdfaisal@gmail.com', href: 'mailto:er.mmdfaisal@gmail.com' },
                 { icon: <Phone size={14} />, text: '+971 507 746 248', href: 'tel:+971507746248' },
-                { icon: <Linkedin size={14} />, text: 'LinkedIn Profile', href: 'https://linkedin.com/in/mohammad-faisal' },
+                { icon: <LinkedinIcon size={14} />, text: 'LinkedIn Profile', href: 'https://linkedin.com/in/mohammad-faisal' },
               ].map((item, i) => (
                 <a key={i} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener"
                   style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--text2)', fontSize: '0.88rem', transition: 'color 0.2s' }}
@@ -74,7 +83,7 @@ export default function Footer() {
           </p>
           <div style={{ display: 'flex', gap: 12 }}>
             {[
-              { icon: <Linkedin size={16} />, href: 'https://linkedin.com/in/mohammad-faisal', color: '#3b82f6' },
+              { icon: <LinkedinIcon size={16} />, href: 'https://linkedin.com/in/mohammad-faisal', color: '#3b82f6' },
               { icon: <Mail size={16} />, href: 'mailto:er.mmdfaisal@gmail.com', color: '#a855f7' },
               { icon: <Phone size={16} />, href: 'tel:+971507746248', color: '#06b6d4' },
             ].map((s, i) => (
